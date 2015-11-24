@@ -1,0 +1,1 @@
+web: gunicorn slack_spoof.wsgi --log-file -
