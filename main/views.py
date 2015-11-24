@@ -41,5 +41,6 @@ def spoof(request):
     r = requests.post(url, data=payload)
     print "Slack response: " + r.text
 
-    json_response = {"text": "shhh! Don't tell anybody I helped you with this!", "icon_emoji": ":santa:"}
+    # json_response = {"text": "shhh! Don't tell anybody I helped you with this!", "icon_emoji": ":santa:"}
+    json_response = {"success": "true"}
     return HttpResponse(json.dumps(json_response), content_type="application/json")
