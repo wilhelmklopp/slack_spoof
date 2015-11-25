@@ -1,9 +1,11 @@
-# slack_spoof
+# Slack Spoof
 A project built at BathHack 2015 to spoof messages in Slack
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Setup and Environment variables:
+
+To get started open the link behind the Deploy to Heroku button in a new tab and then follow the instructions here.
 
 ### INCOMING_URL
 1. Go to https://YOUR_TEAM_NAME.slack.com/services/new#diy
