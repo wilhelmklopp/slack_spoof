@@ -26,14 +26,14 @@ def spoof(request):
     response = json.loads(r.text)
     # print "Json user list response: " + str(response)
 
+    full_name = ""
     for i in range(0, len(response["members"])):
         if response["members"][i]["name"] == username:
             full_name = response["members"][i]["name"]
             pic = response["members"][i]["profile"]["image_192"]
-            break
-        if i == 3:
-            json_response = {"text": username + " does not exist."}
-            return HttpResponse(json.dumps(json_response), content_type="application/json")
+    if full_name == "":
+        json_response = {"text": username + " does not exist."}
+        return HttpResponse(json.dumps(json_response), content_type="application/json")
 
     url = os.environ.get("INCOMING_URL")
     payload = "{\"channel\": \"" + channel_name + "\"" + ", \"username\": \"" + full_name + "\"" + ", \"text\":" + "\"" + message + "\"" + ", \"icon_url\":" + "\"" + pic + "\"}"
