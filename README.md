@@ -9,6 +9,8 @@ A project built at BathHack 2015 to spoof messages in Slack
 
 ## Setup and Environment variables:
 
+Disclaimer: For this to work, you need to have the right to add more Slack integrations for you team(i.e. be an Admin).
+
 To get started open the link behind the Deploy to Heroku button in a new tab and then follow the instructions here.
 
 ### INCOMING_URL
